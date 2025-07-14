@@ -122,7 +122,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/bb946f8a-a8ce-4f3d-bee5-7ce1030411ad"
+        "./manifest/meta/dev.json"
       ],
       "#components": [
         "./components"
@@ -187,7 +187,6 @@
     "../dist",
     "../.data",
     "../node_modules",
-    "../../../node_modules",
     "../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/node_modules",
     "../node_modules/.pnpm/@nuxt+icon@1.15.0_magicast@_d6442a69a907883f62679c447da32132/node_modules/@nuxt/icon/node_modules",
     "../node_modules/.pnpm/@nuxt+fonts@0.11.4_db0@0.3._0d16a5534dd7cacc5ac0ccecd48dcd18/node_modules/@nuxt/fonts/node_modules",
@@ -210,6 +209,6 @@
     "../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@6_c0e293c1f66ed4fce2662051940eaeff/node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/.pnpm/@nuxt+telemetry@2.6.6_magicast@0.3.5/node_modules/@nuxt/telemetry/runtime/server",
     "../node_modules/.pnpm/@nuxt+telemetry@2.6.6_magicast@0.3.5/node_modules/@nuxt/telemetry/dist/runtime/server",
-    "../.output"
+    "dev"
   ]
 }

@@ -40,4 +40,5 @@ export { useOverlay } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad
 export { portalTargetInjectionKey, usePortal } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/composables/usePortal';
 export { useToast } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/composables/useToast';
 export { useColorMode } from '../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/composables';
+export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@6_c0e293c1f66ed4fce2662051940eaeff/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/pages/runtime/composables';

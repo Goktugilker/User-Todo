@@ -144,7 +144,6 @@
   ],
   "exclude": [
     "../node_modules",
-    "../../../node_modules",
     "../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/node_modules",
     "../node_modules/.pnpm/@nuxt+icon@1.15.0_magicast@_d6442a69a907883f62679c447da32132/node_modules/@nuxt/icon/node_modules",
     "../node_modules/.pnpm/@nuxt+fonts@0.11.4_db0@0.3._0d16a5534dd7cacc5ac0ccecd48dcd18/node_modules/@nuxt/fonts/node_modules",
