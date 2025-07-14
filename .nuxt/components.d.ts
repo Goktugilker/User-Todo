@@ -12,7 +12,8 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'UAccordion': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']
+      'TodoHeader': typeof import("../app/components/Todo/header.vue")['default']
+    'UAccordion': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']
     'UAlert': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']
     'UApp': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']
     'UAvatar': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Avatar.vue")['default']
@@ -96,7 +97,8 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyUAccordion': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']>
+      'LazyTodoHeader': LazyComponent<typeof import("../app/components/Todo/header.vue")['default']>
+    'LazyUAccordion': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']>
     'LazyUAlert': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']>
     'LazyUApp': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']>
     'LazyUAvatar': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Avatar.vue")['default']>
@@ -186,6 +188,7 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const TodoHeader: typeof import("../app/components/Todo/header.vue")['default']
 export const UAccordion: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']
 export const UAlert: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']
 export const UApp: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']
@@ -270,6 +273,7 @@ export const Html: typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watc
 export const Body: typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyTodoHeader: LazyComponent<typeof import("../app/components/Todo/header.vue")['default']>
 export const LazyUAccordion: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']>
 export const LazyUAlert: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']>
 export const LazyUApp: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']>

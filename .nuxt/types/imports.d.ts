@@ -44,6 +44,7 @@ declare global {
   const inject: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['inject']
   const injectHead: typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/head')['injectHead']
   const inputIdInjectionKey: typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/composables/useFormField')['inputIdInjectionKey']
+  const isDark: typeof import('../../app/utils/theme')['isDark']
   const isNuxtError: typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/error')['isNuxtError']
   const isPrerendered: typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/payload')['isPrerendered']
   const isProxy: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['isProxy']
@@ -104,6 +105,7 @@ declare global {
   const toRef: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toRef']
   const toRefs: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toRefs']
   const toValue: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toValue']
+  const toggleTheme: typeof import('../../app/utils/theme')['toggleTheme']
   const triggerRef: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['triggerRef']
   const tryUseNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']
   const unref: typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['unref']
@@ -250,6 +252,7 @@ declare module 'vue' {
     readonly inject: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/head')['injectHead']>
     readonly inputIdInjectionKey: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_ad3ebd9957ecd300163fa4ccb617f7f5/node_modules/@nuxt/ui/dist/runtime/composables/useFormField')['inputIdInjectionKey']>
+    readonly isDark: UnwrapRef<typeof import('../../app/utils/theme')['isDark']>
     readonly isNuxtError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/error')['isNuxtError']>
     readonly isPrerendered: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/composables/payload')['isPrerendered']>
     readonly isProxy: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['isProxy']>
@@ -310,6 +313,7 @@ declare module 'vue' {
     readonly toRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toRefs']>
     readonly toValue: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['toValue']>
+    readonly toggleTheme: UnwrapRef<typeof import('../../app/utils/theme')['toggleTheme']>
     readonly triggerRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['triggerRef']>
     readonly tryUseNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.17.6_@parcel+watcher_f33d5785cc47b09993aa6f99baa9aa82/node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']>
     readonly unref: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.5.17_typescript@5.8.3/node_modules/vue')['unref']>
