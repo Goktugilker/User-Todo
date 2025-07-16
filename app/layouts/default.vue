@@ -1,11 +1,15 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <div class="w-dvw h-24 flex flex-row">
+  <div
+    class="w-dvw h-24 flex flex-row"
+    :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white'"
+  >
     <div
       class="w-dvw h-24 flex flex-row items-center justify-between px-4 border-b-2"
-      :class="isDark() ? 'border-white' : 'border-gray-950'"
+    
     >
       <div>
         <h1 class="font-extrabold text-6xl w-96 overflow-y-hidden">
@@ -16,4 +20,11 @@
     </div>
   </div>
   <slot />
+  <div
+   class="w-screen h-24 flex flex-row items-center justify-center"
+   :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' ">
+    <p class="text-gray-500">
+      Made with ❤️ by Goktuğ
+    </p>
+  </div>
 </template>

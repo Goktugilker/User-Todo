@@ -3,6 +3,10 @@ import type { CustomAppConfig } from 'nuxt/schema'
 import type { Defu } from 'defu'
 import cfg0 from "../../app/app.config"
 
+declare global {
+  const defineAppConfig: <T>(appConfig: T) => T
+}
+
 declare const inlineConfig = {
   "nuxt": {},
   "ui": {

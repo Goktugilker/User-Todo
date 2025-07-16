@@ -1,5 +1,4 @@
 
-import { _replaceAppConfig } from '#app/config'
 import { defuFn } from 'defu'
 
 const inlineConfig = {
@@ -232,12 +231,16 @@ const inlineConfig = {
   }
 }
 
+/** client **/
+import { _replaceAppConfig } from '#app/config'
+
 // Vite - webpack is handled directly in #app/config
-if (import.meta.hot) {
+if (import.meta.dev && !import.meta.nitro && import.meta.hot) {
   import.meta.hot.accept((newModule) => {
     _replaceAppConfig(newModule.default)
   })
 }
+/** client-end **/
 
 import cfg0 from "C:/Users/goktu/OneDrive/Belgeler/Masaüstü/vue1/user-todo/app/app.config.ts"
 

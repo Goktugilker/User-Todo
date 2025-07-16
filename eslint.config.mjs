@@ -1,5 +1,4 @@
-import { createConfigForNuxt } from '@nuxt/eslint-config'
+// eslint.config.mjs
+import antfu from '@antfu/eslint-config'
 
-export default createConfigForNuxt({
-  // options here
-})
+export default antfu()

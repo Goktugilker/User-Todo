@@ -1,52 +1,75 @@
-# Nuxt Başlangıç Görevi
+# Nuxt Minimal Starter
 
-Bu görevde temel Nuxt kurulum adımlarını uygulayarak, başlangıç seviyesinde ve düzenli bir proje oluşturman bekleniyor. Kodunu temiz ve anlaşılır yazmaya dikkat et.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Görevin
+## Setup
 
-Herkesin todo listesi olan bir kullanıcı listesi uygulaması geliştirmek.
+Make sure to install dependencies:
 
----
+```bash
+# npm
+npm install
 
-## 1. Hazırlık
+# pnpm
+pnpm install
 
-* NuxtUI dökümanlarını incele, temel componentleri gözden geçir.
-* İkonlarda NuxtUI'ın `<UIcon>` componentini projende kullanacaksın.
-* Projen için bir Github reposu oluştur ve koduna erişmem için bana yetki ver.
-* Yaptığın her geliştirmede, açıklayıcı commit mesajları kullan (örn. "proje oluşturuldu", "todolist tablosu eklendi").
-* Gerekirse küçük bir demo proje açıp pratik yapabilirsin.
+# yarn
+yarn install
 
----
+# bun
+bun install
+```
 
-## 2. Kurulum
+## Development Server
 
-* Yeni bir Nuxt projesi oluştur.
-* Projene **NuxtUI**, **Pinia**, **NuxtFonts** ve **Tailwind CSS** kütüphanelerini ekle, hepsinin çalıştığını kontrol et.
-* Kod standartları için **ESLint** kullan, antfu konfigürasyonunu uygula.
-  Detaylar: [https://github.com/antfu/eslint-config](https://github.com/antfu/eslint-config)
+Start the development server on `http://localhost:3000`:
 
----
+```bash
+# npm
+npm run dev
 
-## 3. Proje Yapısı
+# pnpm
+pnpm dev
 
-* **layout**, **pages**, **utils** ve **components** klasörlerini doğru şekilde kullan.
-* Tüm projede TypeScript kullan.
-* useHead ile temel SEO ayarı ekle (mükemmel olmasına gerek yok).
-* Siten en az 2 sayfadan oluşmalı, bunlardan biri parametreyle açılan bir sayfa olmalı.
-* Sitede bir **header** (minimum başlık olacak) ve bir **footer** (adını yazman yeterli) bulunmalı.
-* Aydınlık ve karanlık tema seçeneği sunulmalı.
-* Tüm uygulaman **responsive** (mobil ve masaüstü uyumlu) olmalı.
+# yarn
+yarn dev
 
----
+# bun
+bun run dev
+```
 
-## 4. İçerik
+## Production
 
-* JSONPlaceholder API’si ile kullanıcıları çek.
-* Her kullanıcının kendilerine ait todoları olmalı ve bunlar üzerinde CRUD işlemleri yapılabilmeli.
-* Kullanıcıların detay sayfası olmalı ve bu sayfada todoları da bulunmalı.
-* Kullanıcı ve todo listelerinde **arama ve filtreleme** fonksiyonu ekle (arama inputu veya filtreleme menüsü olabilir).
-* Todo silme veya ekleme işlemlerinde **toast bildirim** göster.
+Build the application for production:
 
----
+```bash
+# npm
+npm run build
 
-> Gereksiz dosya, component veya karmaşıklıktan kaçın. Görev bitince kodunu teslim etmeye hazır ol.
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
