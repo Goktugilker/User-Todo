@@ -115,7 +115,6 @@ declare global {
   const tryUseNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']
   const unref: typeof import('vue')['unref']
   const updateAppConfig: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/config')['updateAppConfig']
-  const useApiStore: typeof import('../../app/stores/api')['useApiStore']
   const useAppConfig: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/config')['useAppConfig']
   const useAsyncData: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']
   const useAttrs: typeof import('vue')['useAttrs']
@@ -196,6 +195,7 @@ declare global {
   const useToast: typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useToast')['useToast']
   const useTodoStore: typeof import('../../app/stores/todo')['useTodoStore']
   const useTransitionState: typeof import('vue')['useTransitionState']
+  const useUserStore: typeof import('../../app/stores/api')['useUserStore']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -331,7 +331,6 @@ declare module 'vue' {
     readonly tryUseNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/nuxt')['tryUseNuxtApp']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly updateAppConfig: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/config')['updateAppConfig']>
-    readonly useApiStore: UnwrapRef<typeof import('../../app/stores/api')['useApiStore']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/config')['useAppConfig']>
     readonly useAsyncData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
@@ -412,6 +411,7 @@ declare module 'vue' {
     readonly useToast: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useToast')['useToast']>
     readonly useTodoStore: UnwrapRef<typeof import('../../app/stores/todo')['useTodoStore']>
     readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
+    readonly useUserStore: UnwrapRef<typeof import('../../app/stores/api')['useUserStore']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

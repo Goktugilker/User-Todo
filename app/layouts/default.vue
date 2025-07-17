@@ -5,7 +5,7 @@
 <template>
   <div
     class="w-dvw h-24 flex flex-row"
-    :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white'"
+    :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white'"
   >
     <div
       class="w-dvw h-24 flex flex-row items-center justify-between px-4 border-b-2"
@@ -21,7 +21,7 @@
   <slot />
   <div
     class="w-screen h-24 flex flex-row items-center justify-center"
-    :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' "
+    :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' "
   >
     <p class="text-gray-500">
       Made with ❤️ by Goktuğ
