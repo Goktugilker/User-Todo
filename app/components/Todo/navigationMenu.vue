@@ -8,7 +8,6 @@ const users = computed<NavigationMenuItem[][]>(() => [
     icon: 'i-lucide-user',
     class: 'text-white',
     to: `/todo/${user.id}`,
-    
   })),
 ])
 </script>
