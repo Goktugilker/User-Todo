@@ -1,13 +1,21 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable no-undef -->
 <script setup lang="ts">
-useHead({
-  title: 'Todo List',
+definePageMeta({
+  name: 'home',
+})
+const apiStore = useApiStore()
+
+onMounted(async () => {
+  await apiStore.fetchUsers()
 })
 </script>
 
 <template>
-  <div 
-  class="w-screen flex flex-column h-dvh"
-  :class="isDark() ? 'bg-zinc-600 text-white' : 'bg-gray-800 text-white' ">
+  <div
+    class="w-screen flex flex-column h-dvh overflow-hidden"
+  >
+
     <todo-homepage />
   </div>
 </template>

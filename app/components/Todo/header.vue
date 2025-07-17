@@ -1,5 +1,9 @@
 <script setup lang="ts">
+
 </script>
+
+
+
 
 <template>
   <div class="flex flex-row items-center justify-center gap-3 w-36">
@@ -9,8 +13,9 @@
       class="scale-150"
       @click="toggleTheme"
     />
-    <UButton class="bg-transparent">
-      <img src="../../image/github.png ">
+    <UButton class="bg-transparent" href="https://github.com/Goktugilker">
+      <!-- <img src="../../image/github.png "> -->
+      <UIcon class="text-4xl" name="mdi:github" />
     </UButton>
   </div>
 </template>

@@ -1,29 +1,25 @@
 <script setup lang="ts">
-const items = ref([])
-const value = ref()
 </script>
 
 <template>
   <div
-    class="w-dvw h-dvh flex flex-row items-center justify-center gap-4  -my-64 scale-110"
+    class="w-dvw h-dvh flex flex-row items-center justify-center gap-4 scale-110 "
     :class="isDark() ? 'bg-zinc-600 text-white' : 'bg-gray-800 text-white' "
   >
-    <UButton
-      label="Todoları Yükle"
-      icon="i-lucide-refresh-cw"
-      class="bg-error-600 text-white"
-    />
-    <UButton
-      label="Kişileri Yenile"
-      icon="lucide:user-round-search"
-      class="bg-success-600 text-white"
-    />
-    <USelectMenu
-      v-model="value"
-      :items="items"
-      class="w-48"
-      variant="soft"
-      :class="isDark() ? 'border-zinc-800 shadow-lg shadow-amber-600 bg-zinc-700' : 'border-gray-700 shadow-lg shadow-gray-600 bg-gray-700' "
-    />
+    <div
+      class="flex flex-row gap-4 text-white w-dvw h-dvh justify-center items-center "
+    >
+      <!-- <TodoUpload />
+      <TodoUserReload />
+      <USelectMenu
+        v-model="userStore.user"
+        :items="userStore.users ?? []"
+        label-key="name"
+        class="w-48"
+        :class="isDark() ? 'border-zinc-800 shadow-lg shadow-amber-600 bg-zinc-700 text-white' : 'border-gray-700 shadow-lg shadow-gray-600 bg-gray-700 text-white' "
+      /> -->
+      <TodoNavigationMenu class="scale-150 " />
+    </div>
+    <div />
   </div>
 </template>
