@@ -15,8 +15,8 @@ interface _GlobalComponents {
       'TodoHeader': typeof import("../app/components/Todo/header.vue")['default']
     'TodoHomepage': typeof import("../app/components/Todo/homepage.vue")['default']
     'TodoNavigationMenu': typeof import("../app/components/Todo/navigationMenu.vue")['default']
+    'TodoSave': typeof import("../app/components/Todo/todoSave.vue")['default']
     'TodoUpload': typeof import("../app/components/Todo/todoUpload.vue")['default']
-    'TodoUserReload': typeof import("../app/components/Todo/userReload.vue")['default']
     'UAccordion': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']
     'UAlert': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']
     'UApp': typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']
@@ -104,8 +104,8 @@ interface _GlobalComponents {
       'LazyTodoHeader': LazyComponent<typeof import("../app/components/Todo/header.vue")['default']>
     'LazyTodoHomepage': LazyComponent<typeof import("../app/components/Todo/homepage.vue")['default']>
     'LazyTodoNavigationMenu': LazyComponent<typeof import("../app/components/Todo/navigationMenu.vue")['default']>
+    'LazyTodoSave': LazyComponent<typeof import("../app/components/Todo/todoSave.vue")['default']>
     'LazyTodoUpload': LazyComponent<typeof import("../app/components/Todo/todoUpload.vue")['default']>
-    'LazyTodoUserReload': LazyComponent<typeof import("../app/components/Todo/userReload.vue")['default']>
     'LazyUAccordion': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']>
     'LazyUAlert': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']>
     'LazyUApp': LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']>
@@ -199,8 +199,8 @@ declare module 'vue' {
 export const TodoHeader: typeof import("../app/components/Todo/header.vue")['default']
 export const TodoHomepage: typeof import("../app/components/Todo/homepage.vue")['default']
 export const TodoNavigationMenu: typeof import("../app/components/Todo/navigationMenu.vue")['default']
+export const TodoSave: typeof import("../app/components/Todo/todoSave.vue")['default']
 export const TodoUpload: typeof import("../app/components/Todo/todoUpload.vue")['default']
-export const TodoUserReload: typeof import("../app/components/Todo/userReload.vue")['default']
 export const UAccordion: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']
 export const UAlert: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']
 export const UApp: typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']
@@ -288,8 +288,8 @@ export const NuxtRouteAnnouncer: typeof import("../node_modules/.pnpm/nuxt@4.0.0
 export const LazyTodoHeader: LazyComponent<typeof import("../app/components/Todo/header.vue")['default']>
 export const LazyTodoHomepage: LazyComponent<typeof import("../app/components/Todo/homepage.vue")['default']>
 export const LazyTodoNavigationMenu: LazyComponent<typeof import("../app/components/Todo/navigationMenu.vue")['default']>
+export const LazyTodoSave: LazyComponent<typeof import("../app/components/Todo/todoSave.vue")['default']>
 export const LazyTodoUpload: LazyComponent<typeof import("../app/components/Todo/todoUpload.vue")['default']>
-export const LazyTodoUserReload: LazyComponent<typeof import("../app/components/Todo/userReload.vue")['default']>
 export const LazyUAccordion: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Accordion.vue")['default']>
 export const LazyUAlert: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/Alert.vue")['default']>
 export const LazyUApp: LazyComponent<typeof import("../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/components/App.vue")['default']>

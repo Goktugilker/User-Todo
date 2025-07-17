@@ -9,7 +9,6 @@
   >
     <div
       class="w-dvw h-24 flex flex-row items-center justify-between px-4 border-b-2"
-    
     >
       <div>
         <h1 class="font-extrabold text-6xl w-96 overflow-y-hidden">
@@ -21,8 +20,9 @@
   </div>
   <slot />
   <div
-   class="w-screen h-24 flex flex-row items-center justify-center"
-   :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' ">
+    class="w-screen h-24 flex flex-row items-center justify-center"
+    :class="isDark() ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' "
+  >
     <p class="text-gray-500">
       Made with ❤️ by Goktuğ
     </p>

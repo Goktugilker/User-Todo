@@ -2,9 +2,6 @@
 
 </script>
 
-
-
-
 <template>
   <div class="flex flex-row items-center justify-center gap-3 w-36">
     <UButton
