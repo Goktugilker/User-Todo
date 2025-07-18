@@ -41,8 +41,8 @@ export { localeContextInjectionKey, useLocale } from '../node_modules/.pnpm/@nux
 export { useOverlay } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useOverlay';
 export { portalTargetInjectionKey, usePortal } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/usePortal';
 export { useToast } from '../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useToast';
-export { useUserStore } from '../app/stores/api';
 export { useTodoStore } from '../app/stores/todo';
+export { useUserStore } from '../app/stores/userStore';
 export { useColorMode } from '../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/composables';
 export { defineStore, acceptHMRUpdate, usePinia, storeToRefs } from '../node_modules/.pnpm/@pinia+nuxt@0.11.1_magicast_f6efdfbfb7fcb024e6cdb3d69069e6a0/node_modules/@pinia/nuxt/dist/runtime/composables';
 export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@7_63c1a7bb2a1b836b93bd3e8f35c84e2c/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

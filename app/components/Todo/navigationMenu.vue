@@ -16,6 +16,7 @@ const users = computed<NavigationMenuItem[][]>(() => [
     },
     onSelect: () => {
       // seçildiğinde olmasını beklediğimiz işlemler
+      userStore.user = user
     },
   })),
 ])

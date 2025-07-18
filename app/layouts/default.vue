@@ -11,7 +11,7 @@
       class="w-dvw h-24 flex flex-row items-center justify-between px-4 border-b-2"
     >
       <div>
-        <h1 class="font-extrabold text-6xl w-96 overflow-y-hidden">
+        <h1 class="font-extrabold text-4xl w-96 overflow-y-hidden" @click="$router.push('/')">
           Todo List
         </h1>
       </div>

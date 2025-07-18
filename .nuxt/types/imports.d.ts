@@ -195,7 +195,7 @@ declare global {
   const useToast: typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useToast')['useToast']
   const useTodoStore: typeof import('../../app/stores/todo')['useTodoStore']
   const useTransitionState: typeof import('vue')['useTransitionState']
-  const useUserStore: typeof import('../../app/stores/api')['useUserStore']
+  const useUserStore: typeof import('../../app/stores/userStore')['useUserStore']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -411,7 +411,7 @@ declare module 'vue' {
     readonly useToast: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useToast')['useToast']>
     readonly useTodoStore: UnwrapRef<typeof import('../../app/stores/todo')['useTodoStore']>
     readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
-    readonly useUserStore: UnwrapRef<typeof import('../../app/stores/api')['useUserStore']>
+    readonly useUserStore: UnwrapRef<typeof import('../../app/stores/userStore')['useUserStore']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
