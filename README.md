@@ -50,3 +50,12 @@ Herkesin todo listesi olan bir kullanıcı listesi uygulaması geliştirmek.
 ---
 
 > Gereksiz dosya, component veya karmaşıklıktan kaçın. Görev bitince kodunu teslim etmeye hazır ol.
+
+## review
+
+* proje üzerinde kullanılmayan paketleri kaldır
+* component tarafında mimarinin düzenlenmesi gerekiyor şuanda çok dağınık ve her şey components/Todo altında. aynı şekilde isim tekrarlarından da kaçın todo ile başlayan componentlerini todo/ klasörü altında tutabilirsin.
+* todostore çok dağınık ve hatalar içeriyor. (.ts içerisinde onMounted gibi hookları kullanamzsın)
+* eslint standartlarına uygun değil
+* özellikle local depoya kaydetmek gibi işlemler her zaman store üzerinde gerçekleşmeli .vue dosyaları sadece arada bağlantı kurmak için kullanılmalı
+* buraya kadar AI kullanmadan yapman şimdilik yeterli olacaktır.
