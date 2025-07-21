@@ -39,8 +39,6 @@ watch(() => todoStore.todos, (newTodos) => {
     localStorage.setItem(userTodoKey.value, JSON.stringify(newTodos)) // todo'ları localStorage'a kaydettim
   }
 }, { deep: true })
-
-
 </script>
 
 <template>

@@ -4,7 +4,6 @@ export const useTodoStore = defineStore('todo', () => {
   const todos = ref<Todo[]>([])
   const todo = ref<Todo>()
 
-  
   const toast = useToast()
   function createToast() {
     toast.add({
