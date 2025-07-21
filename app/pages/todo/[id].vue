@@ -18,25 +18,25 @@ const storedTodos = ref<Todo[]>([])
 
 onMounted(() => {
   if (process.client) {
-    const storedUserData = localStorage.getItem('user')
+    const storedUserData = localStorage.getItem('user') // kullanıcı bilgilerini aldım
     if (storedUserData) {
       storedUser.value = JSON.parse(storedUserData)
     }
 
     const stored = localStorage.getItem(userTodoKey.value)
     if (stored) {
-      storedTodos.value = JSON.parse(stored)
+      storedTodos.value = JSON.parse(stored) // kullanıcıya ait todo'ları aldım
       todoStore.todos = storedTodos.value
     }
 
     watch(todoStore.todos, (newTodos) => {
-      storedTodos.value = newTodos
+      storedTodos.value = newTodos // todo'ları güncelledim
     }, { deep: true, immediate: true })
   }
 })
 watch(() => todoStore.todos, (newTodos) => {
   if (process.client && newTodos) {
-    localStorage.setItem(userTodoKey.value, JSON.stringify(newTodos))
+    localStorage.setItem(userTodoKey.value, JSON.stringify(newTodos)) // todo'ları localStorage'a kaydettim
   }
 }, { deep: true })
 
