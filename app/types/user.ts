@@ -3,11 +3,11 @@ export interface User {
   name: string
   email: string
   avatar: string
-  role:string
-  registeredAt:string
+  role: string
+  registeredAt: string
   phone: string
   active: boolean
-  address:{
+  address: {
     city: string
     country: string
   }

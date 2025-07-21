@@ -15,7 +15,7 @@
           Todo List
         </h1>
       </div>
-      <TodoHeader />
+      <Header />
     </div>
   </div>
   <slot />

@@ -1,39 +1,46 @@
 <script setup lang="ts">
 import type { Todo } from '../../types/todo'
+import { computed, onMounted, ref, watch } from 'vue'
 
 const todoStore = useTodoStore()
 definePageMeta({
   name: 'userDetails',
 })
+
 const choice = ref<'show' | 'create'>('show')
 const storedUser = ref<{ id?: number, name?: string } | null>(null)
+
+const userTodoKey = computed(() =>
+  storedUser.value?.id !== undefined ? `todos_user_${storedUser.value.id}` : 'todos_default',
+)
+
 const storedTodos = ref<Todo[]>([])
+
 onMounted(() => {
   if (process.client) {
-    const stored = localStorage.getItem('todos')
+    const storedUserData = localStorage.getItem('user')
+    if (storedUserData) {
+      storedUser.value = JSON.parse(storedUserData)
+    }
+
+    const stored = localStorage.getItem(userTodoKey.value)
     if (stored) {
       storedTodos.value = JSON.parse(stored)
-
-      watch(todoStore.todos, (newTodos) => {
-        storedTodos.value = newTodos
-      }, { deep: true, immediate: true })
+      todoStore.todos = storedTodos.value
     }
+
+    watch(todoStore.todos, (newTodos) => {
+      storedTodos.value = newTodos
+    }, { deep: true, immediate: true })
   }
 })
-
-onMounted(() => {
-  if (process.client) {
-    const stored = localStorage.getItem('user')
-    if (stored) {
-      storedUser.value = JSON.parse(stored)
-    }
-  }
-})
-watch(todoStore.todos, (newTodos) => {
-  if (process.client) {
-    localStorage.setItem('todos', JSON.stringify(newTodos))
+watch(() => todoStore.todos, (newTodos) => {
+  if (process.client && newTodos) {
+    localStorage.setItem(userTodoKey.value, JSON.stringify(newTodos))
   }
 }, { deep: true })
+
+
 </script>
 
 <template>
@@ -53,16 +60,19 @@ watch(todoStore.todos, (newTodos) => {
           <TodoUpload @click="choice = 'show'" />
         </div>
         <div v-if="choice === 'show'" class="flex flex-col items-center ">
-            <div v-for="todo in storedTodos" :key="todo.id" class="p-4 w-96">
-              <div class="flex flex-col items-start min-h-fit w-full rounded-lg p-4 "
-                :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-700 text-white'">
+          <div v-for="todo in storedTodos" :key="todo.id" class="p-4 w-96">
+            <div
+              v-if="todo.userId === storedUser?.id"
+              class="flex flex-col items-start min-h-fit w-full rounded-lg p-4 "
+              :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-700 text-white'"
+            >
               <div class="text-lg">
                 {{ todo.text }}
               </div>
               <div class="text-md text-gray-400 w-full">
                 {{ todo.description }}
                 <UButton
-                  :icon="'i-lucide-trash-2'"
+                  icon="i-lucide-trash-2"
                   class="float-right bg-red-500 text-white justify-center"
                   @click="todoStore.deleteTodo(todo.id)"
                 />
@@ -70,9 +80,8 @@ watch(todoStore.todos, (newTodos) => {
               <div class="text-sm text-gray-400 break-words">
                 {{ todo.endDate }}
               </div>
-              
-              </div>
             </div>
+          </div>
         </div>
         <div v-else class="flex flex-col items-center">
           <TodoCreate />

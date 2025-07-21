@@ -11,7 +11,7 @@ onMounted(async () => {
 
 <template>
   <div class="w-screen flex flex-column h-dvh overflow-hidden">
-    <todo-homepage />
+    <home-homepage />
   </div>
 </template>
 

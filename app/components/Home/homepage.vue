@@ -18,7 +18,7 @@
         class="w-48"
         :class="isDark ? 'border-zinc-800 shadow-lg shadow-amber-600 bg-zinc-700 text-white' : 'border-gray-700 shadow-lg shadow-gray-600 bg-gray-700 text-white' "
       /> -->
-      <TodoNavigationMenu class="scale-150 " />
+      <home-navigation-menu class="scale-150 " />
     </div>
     <div />
   </div>
