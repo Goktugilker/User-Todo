@@ -3,10 +3,10 @@ import type { Todo } from '../../types/todo'
 import { computed, onMounted, ref, watch } from 'vue'
 
 const todoStore = useTodoStore()
+todoStore.todos = []
 definePageMeta({
   name: 'userDetails',
 })
-
 const choice = ref<'show' | 'create'>('show')
 const storedUser = ref<{ id?: number, name?: string } | null>(null)
 

@@ -12,8 +12,7 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'HomeHomepage': typeof import("../app/components/Home/homepage.vue")['default']
-    'HomeNavigationMenu': typeof import("../app/components/Home/navigationMenu.vue")['default']
+      'HomeNavigationMenu': typeof import("../app/components/Home/navigationMenu.vue")['default']
     'TodoCreate': typeof import("../app/components/Todo/todoCreate.vue")['default']
     'TodoSave': typeof import("../app/components/Todo/todoSave.vue")['default']
     'TodoUpload': typeof import("../app/components/Todo/todoUpload.vue")['default']
@@ -102,8 +101,7 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/server-placeholder")['default']
-      'LazyHomeHomepage': LazyComponent<typeof import("../app/components/Home/homepage.vue")['default']>
-    'LazyHomeNavigationMenu': LazyComponent<typeof import("../app/components/Home/navigationMenu.vue")['default']>
+      'LazyHomeNavigationMenu': LazyComponent<typeof import("../app/components/Home/navigationMenu.vue")['default']>
     'LazyTodoCreate': LazyComponent<typeof import("../app/components/Todo/todoCreate.vue")['default']>
     'LazyTodoSave': LazyComponent<typeof import("../app/components/Todo/todoSave.vue")['default']>
     'LazyTodoUpload': LazyComponent<typeof import("../app/components/Todo/todoUpload.vue")['default']>
@@ -198,7 +196,6 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
-export const HomeHomepage: typeof import("../app/components/Home/homepage.vue")['default']
 export const HomeNavigationMenu: typeof import("../app/components/Home/navigationMenu.vue")['default']
 export const TodoCreate: typeof import("../app/components/Todo/todoCreate.vue")['default']
 export const TodoSave: typeof import("../app/components/Todo/todoSave.vue")['default']
@@ -288,7 +285,6 @@ export const Html: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blob
 export const Body: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/server-placeholder")['default']
-export const LazyHomeHomepage: LazyComponent<typeof import("../app/components/Home/homepage.vue")['default']>
 export const LazyHomeNavigationMenu: LazyComponent<typeof import("../app/components/Home/navigationMenu.vue")['default']>
 export const LazyTodoCreate: LazyComponent<typeof import("../app/components/Todo/todoCreate.vue")['default']>
 export const LazyTodoSave: LazyComponent<typeof import("../app/components/Todo/todoSave.vue")['default']>
