@@ -141,6 +141,7 @@ declare global {
   const useModel: typeof import('vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
+  const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@7_63c1a7bb2a1b836b93bd3e8f35c84e2c/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const useOverlay: typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useOverlay')['useOverlay']
   const usePinia: typeof import('../../node_modules/.pnpm/@pinia+nuxt@0.11.1_magicast_f6efdfbfb7fcb024e6cdb3d69069e6a0/node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']
   const usePortal: typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/usePortal')['usePortal']
@@ -356,6 +357,7 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@7_63c1a7bb2a1b836b93bd3e8f35c84e2c/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly useOverlay: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/useOverlay')['useOverlay']>
     readonly usePinia: UnwrapRef<typeof import('../../node_modules/.pnpm/@pinia+nuxt@0.11.1_magicast_f6efdfbfb7fcb024e6cdb3d69069e6a0/node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']>
     readonly usePortal: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+ui@3.2.0_@babel+parse_010323ccdeeac6e5eddac09ff9bb1b20/node_modules/@nuxt/ui/dist/runtime/composables/usePortal')['usePortal']>

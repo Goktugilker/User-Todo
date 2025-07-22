@@ -58,9 +58,16 @@ watch(() => todoStore.todos, (newTodos) => {
           <TodoUpload @click="choice = 'show'" />
         </div>
         <div v-if="choice === 'show'" class="flex flex-col items-center ">
+          <div v-if="storedTodos.length === 0" class="p-4 w-96">
+            <div
+              class="flex flex-col items-center justify-center text-center text-7xl font-bold overflow-y-hidden"
+              :class="isDark ? 'text-zinc-700 ' : 'text-gray-700 '"
+            >
+              <span>no todos available</span>
+            </div>
+          </div>
           <div v-for="todo in storedTodos" :key="todo.id" class="p-4 w-96">
             <div
-              v-if="todo.userId === storedUser?.id"
               class="flex flex-col items-start min-h-fit w-full rounded-lg p-4 "
               :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-700 text-white'"
             >

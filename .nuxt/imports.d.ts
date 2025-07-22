@@ -45,4 +45,5 @@ export { useTodoStore } from '../app/stores/todo';
 export { useUserStore } from '../app/stores/userStore';
 export { useColorMode } from '../node_modules/.pnpm/@nuxtjs+color-mode@3.5.2_magicast@0.3.5/node_modules/@nuxtjs/color-mode/dist/runtime/composables';
 export { defineStore, acceptHMRUpdate, usePinia, storeToRefs } from '../node_modules/.pnpm/@pinia+nuxt@0.11.1_magicast_f6efdfbfb7fcb024e6cdb3d69069e6a0/node_modules/@pinia/nuxt/dist/runtime/composables';
+export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@2.6.2_vite@7_63c1a7bb2a1b836b93bd3e8f35c84e2c/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/pages/runtime/composables';
