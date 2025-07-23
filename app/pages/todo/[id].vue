@@ -2,6 +2,7 @@
 import type { Todo } from '../../types/todo'
 import { computed, onMounted, ref, watch } from 'vue'
 
+const userStore = useUserStore()
 const todoStore = useTodoStore()
 todoStore.todos = []
 definePageMeta({
@@ -17,22 +18,16 @@ const userTodoKey = computed(() =>
 const storedTodos = ref<Todo[]>([])
 
 onMounted(() => {
-  if (process.client) {
-    const storedUserData = localStorage.getItem('user') // kullanıcı bilgilerini aldım
-    if (storedUserData) {
-      storedUser.value = JSON.parse(storedUserData)
-    }
+    userStore.getuser(storedUser) // kullanıcı bilgilerini aldım
 
-    const stored = localStorage.getItem(userTodoKey.value)
-    if (stored) {
-      storedTodos.value = JSON.parse(stored) // kullanıcıya ait todo'ları aldım
-      todoStore.todos = storedTodos.value
-    }
+    todoStore.getTodo(userTodoKey, storedTodos) // todo'ları aldım
 
     watch(todoStore.todos, (newTodos) => {
-      storedTodos.value = newTodos // todo'ları güncelledim
+     todoStore.updateTodo(newTodos, storedTodos) // todo'ları güncelledim
     }, { deep: true, immediate: true })
-  }
+    
+  
+
 })
 watch(() => todoStore.todos, (newTodos) => {
   if (process.client && newTodos) {

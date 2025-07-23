@@ -9,13 +9,19 @@ export const useUserStore = defineStore('user', () => {
   }
 
   watch(user, (newUser) => {
-    if (process.client) {
-      localStorage.setItem('user', JSON.stringify(newUser))
-    }
+    localStorage.setItem('user', JSON.stringify(newUser))
   })
+
+  const getuser = (storedUser:any) => {
+    const storedUserData = localStorage.getItem('user') // kullanıcı bilgilerini aldım
+    if (storedUserData) {
+      storedUser.value = JSON.parse(storedUserData)
+    }
+  }
   return {
     user,
     users,
     fetchUsers,
+    getuser,
   }
 })
