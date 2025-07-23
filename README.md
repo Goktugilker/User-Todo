@@ -1,3 +1,4 @@
+![GitHub License](https://img.shields.io/github/license/goktugilkerr/usertodo?style=plastic)
 # Nuxt Başlangıç Görevi
 
 Bu görevde temel Nuxt kurulum adımlarını uygulayarak, başlangıç seviyesinde ve düzenli bir proje oluşturman bekleniyor. Kodunu temiz ve anlaşılır yazmaya dikkat et.
