@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Todo } from '../../types/todo'
-import { computed, onMounted, ref, watch } from 'vue'
 
 const userStore = useUserStore()
 const todoStore = useTodoStore()
@@ -10,30 +9,46 @@ definePageMeta({
 })
 const choice = ref<'show' | 'create'>('show')
 const storedUser = ref<{ id?: number, name?: string } | null>(null)
-
 const userTodoKey = computed(() =>
-  storedUser.value?.id !== undefined ? `todos_user_${storedUser.value.id}` : 'todos_default',
+storedUser.value?.id !== undefined ? `todos_user_${storedUser.value.id}` : 'todos_default',
 )
+const router = useRouter()
+onMounted(async () => {
+  const _id = router.currentRoute.value.params.id as string | undefined
+
+  const _backHome = () => {
+    router.push({
+      name: 'home',
+    })
+  }
+  if (!_id) 
+    _backHome()
+
+
+  await userStore.fetchUsers()
+    .then(() => {
+      userStore.user = userStore.users.find(user => user.id === Number(_id)) || undefined
+    })
+    .catch(() => _backHome())
+})
 
 const storedTodos = ref<Todo[]>([])
 
 onMounted(() => {
-    userStore.getuser(storedUser) // kullanıcı bilgilerini aldım
+ userStore.getuser(storedUser) // kullanıcı bilgilerini aldım
 
-    todoStore.getTodo(userTodoKey, storedTodos) // todo'ları aldım
+  todoStore.getTodo(userTodoKey, storedTodos) // todo'ları aldım
 
-    watch(todoStore.todos, (newTodos) => {
-     todoStore.updateTodo(newTodos, storedTodos) // todo'ları güncelledim
-    }, { deep: true, immediate: true })
-    
-  
-
+  watch(todoStore.todos, (newTodos) => {
+    todoStore.updateTodo(newTodos, storedTodos) // todo'ları güncelledim
+  }, { deep: true, immediate: true })
 })
 watch(() => todoStore.todos, (newTodos) => {
-  if (process.client && newTodos) {
-    localStorage.setItem(userTodoKey.value, JSON.stringify(newTodos)) // todo'ları localStorage'a kaydettim
+  if (newTodos) {
+    todoStore.saveLocalStorage(userTodoKey, storedTodos) // todo'ları localStorage'a kaydettim
   }
 }, { deep: true })
+
 </script>
 
 <template>
@@ -41,17 +56,19 @@ watch(() => todoStore.todos, (newTodos) => {
     class="w-dvw min-h-screen flex flex-col items-center justify-center"
     :class="isDark ? 'bg-zinc-600 text-white' : 'bg-gray-800 text-white'"
   >
+
     <h1 class="text-5xl">
       {{ storedUser?.name ?? '' }}
     </h1>
+  <div class="flex flex-row items-center justify-center gap-4 mt-4">
+    <TodoSave @click="choice = 'create'" />
+    <TodoUpload @click="choice = 'show'" />
+  </div>
     <div
       class="w-dvw flex flex-row items-center justify-center scale-100"
     >
       <div class="flex flex-col gap-4 text-white w-dvw min-h-screen items-center">
-        <div class="flex flex-row items-center justify-center mt-16 h-20 gap-4">
-          <TodoSave @click="choice = 'create'" />
-          <TodoUpload @click="choice = 'show'" />
-        </div>
+        
         <div v-if="choice === 'show'" class="flex flex-col items-center ">
           <div v-if="storedTodos.length === 0" class="p-4 w-96">
             <div

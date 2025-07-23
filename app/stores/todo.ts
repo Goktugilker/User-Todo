@@ -37,15 +37,18 @@ export const useTodoStore = defineStore('todo', () => {
       deleteToast()
     }
   }
-  const getTodo = (userTodoKey:any,storedTodos:any)=>{
+  const getTodo = (userTodoKey: any, storedTodos: any) => {
     const stored = localStorage.getItem(userTodoKey.value)
     if (stored) {
       storedTodos.value = JSON.parse(stored) // kullanıcıya ait todo'ları aldım
       todos.value = storedTodos.value
     }
   }
-  const updateTodo = (newTodos:any,storedTodos:any)=>{
+  const updateTodo = (newTodos: any, storedTodos: any) => {
     storedTodos.value = newTodos
+  }
+  const saveLocalStorage = (userTodoKey: any, storedTodos: any) => {
+    localStorage.setItem(userTodoKey.value, JSON.stringify(storedTodos.value))
   }
   return {
     todos,
@@ -54,5 +57,6 @@ export const useTodoStore = defineStore('todo', () => {
     deleteTodo,
     getTodo,
     updateTodo,
+    saveLocalStorage,
   }
 })

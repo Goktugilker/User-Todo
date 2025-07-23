@@ -41,7 +41,7 @@ const endDate = ref('')
         type="date"
         class="w-96 mb-4"
       />
-      <UButton class="mt-4" @click="todoStore.createTodo(storedUser?.id || 0, text, description, endDate, false), text = '', description = '', endDate = ''">
+      <UButton class="mt-4" @click="() => { todoStore.createTodo(storedUser?.id || 0, text, description, endDate, false), text = '', description = '', endDate = '' }">
         Save Todo
       </UButton>
     </div>

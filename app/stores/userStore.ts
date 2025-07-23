@@ -1,6 +1,9 @@
 import type { User } from '../types/user'
 
 export const useUserStore = defineStore('user', () => {
+  const config = useRuntimeConfig()
+  const key = config.public.userKey
+
   const user = ref<User>()
   const users = ref<User[]>([])
   async function fetchUsers() {
@@ -9,14 +12,14 @@ export const useUserStore = defineStore('user', () => {
   }
 
   watch(user, (newUser) => {
-    localStorage.setItem('user', JSON.stringify(newUser))
+    localStorage.setItem(key as string, JSON.stringify(newUser))
   })
 
-  const getuser = (storedUser:any) => {
-    const storedUserData = localStorage.getItem('user') // kullanıcı bilgilerini aldım
-    if (storedUserData) {
+  const getuser = (storedUser: any) => {
+    const storedUserData = localStorage.getItem(key as string) // kullanıcı bilgilerini aldım
+    if (!storedUserData) 
+      return
       storedUser.value = JSON.parse(storedUserData)
-    }
   }
   return {
     user,
