@@ -1,4 +1,6 @@
-![GitHub License](https://img.shields.io/github/license/goktugilkerr/usertodo?style=plastic)
+![GitHub License](https://img.shields.io/github/license/goktugilker/User-Todo?style=plastic) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/goktugilker/User-Todo?style=plastic&color=FF0000)
+
+
 # Nuxt Başlangıç Görevi
 
 Bu görevde temel Nuxt kurulum adımlarını uygulayarak, başlangıç seviyesinde ve düzenli bir proje oluşturman bekleniyor. Kodunu temiz ve anlaşılır yazmaya dikkat et.
