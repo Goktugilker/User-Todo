@@ -12,7 +12,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="w-full h-full flex justify-center mt-12 overflow-y-auto">
+  <div class="w-full h-full flex justify-center mt-12 overflow-hidden">
     <home-navigation-menu />
   </div>
 </template>

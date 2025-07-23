@@ -242,6 +242,6 @@ if (import.meta.dev && !import.meta.nitro && import.meta.hot) {
 }
 /** client-end **/
 
-import cfg0 from "C:/Users/yigitaydin/GitHub/stj/goktug/User-Todo/app/app.config.ts"
+import cfg0 from "C:/Users/goktu/OneDrive/Belgeler/Masaüstü/vue1/user-todo/app/app.config.ts"
 
 export default /*@__PURE__*/ defuFn(cfg0, inlineConfig)

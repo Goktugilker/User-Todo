@@ -51,21 +51,21 @@ watch(() => todoStore.todos, (newTodos) => {
 
 <template>
   <div
-    class="w-dvw min-h-screen flex flex-col items-center justify-center"
+    class="flex flex-col items-center justify-center gap-4"
   >
     <h1 class="text-5xl">
       {{ storedUser?.name ?? '' }}
     </h1>
-    <div class="flex flex-row items-center justify-center gap-4 mt-4">
+    <div class="flex flex-row items-center justify-center gap-4 p-4">
       <TodoSave @click="choice = 'create'" />
       <TodoUpload @click="choice = 'show'" />
     </div>
     <div
-      class="w-dvw flex flex-row items-center justify-center scale-100"
+      class=" flex flex-row items-center justify-center"
     >
-      <div class="flex flex-col gap-4 text-white w-dvw min-h-screen items-center">
-        <div v-if="choice === 'show'" class="flex flex-col items-center ">
-          <div v-if="storedTodos.length === 0" class="p-4 w-96">
+      <div class="flex flex-col gap-4 text-white items-center w-full">
+        <div v-if="choice === 'show'" class="flex flex-col items-center w-full">
+          <div v-if="storedTodos.length === 0" class="p-4">
             <div
               class="flex flex-col items-center justify-center text-center text-7xl font-bold overflow-y-hidden"
               :class="isDark ? 'text-zinc-700 ' : 'text-gray-700 '"
@@ -73,25 +73,27 @@ watch(() => todoStore.todos, (newTodos) => {
               <span>no todos available</span>
             </div>
           </div>
-          <div v-for="todo in storedTodos" :key="todo.id" class="p-4 w-96">
-            <div
-              class="flex flex-col items-start min-h-fit w-full rounded-lg p-4 "
-            >
-              <div class="text-lg">
+          <div 
+          v-for="todo in storedTodos" :key="todo.id" 
+          class="md:min-w-xl w-xs flex flex-row justify-between items-center p-4 rounded-4xl"
+          :class="isDark ? 'bg-zinc-800/60' : 'bg-secondary-600/30 text-black'"
+          >
+            <div class="flex flex-col w-full  ">
+              <span>
                 {{ todo.text }}
-              </div>
-              <div class="text-md text-gray-400 w-full">
+              </span>
+              <span>
                 {{ todo.description }}
-                <UButton
-                  icon="i-lucide-trash-2"
-                  class="float-right bg-red-500 text-white justify-center"
-                  @click="todoStore.deleteTodo(todo.id)"
-                />
-              </div>
-              <div class="text-sm text-gray-400 break-words">
+              </span>
+              <span>
                 {{ todo.endDate }}
-              </div>
+              </span>
             </div>
+            <UButton
+              icon="i-lucide-trash-2"
+              color="error"
+              @click="todoStore.deleteTodo(todo.id)"
+            />
           </div>
         </div>
         <div v-else class="flex flex-col items-center">

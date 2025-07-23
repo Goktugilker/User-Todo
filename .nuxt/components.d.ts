@@ -12,9 +12,9 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'AppFooter': typeof import("../app/components/app/footer.vue")['default']
+      'HomeNavigationMenu': typeof import("../app/components/Home/navigationMenu.vue")['default']
+    'AppFooter': typeof import("../app/components/app/footer.vue")['default']
     'AppHeader': typeof import("../app/components/app/header.vue")['default']
-    'HomeNavigationMenu': typeof import("../app/components/home/navigationMenu.vue")['default']
     'TodoCreate': typeof import("../app/components/todo/create.vue")['default']
     'TodoSave': typeof import("../app/components/todo/save.vue")['default']
     'TodoUpload': typeof import("../app/components/todo/upload.vue")['default']
@@ -102,9 +102,9 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/server-placeholder")['default']
-      'LazyAppFooter': LazyComponent<typeof import("../app/components/app/footer.vue")['default']>
+      'LazyHomeNavigationMenu': LazyComponent<typeof import("../app/components/Home/navigationMenu.vue")['default']>
+    'LazyAppFooter': LazyComponent<typeof import("../app/components/app/footer.vue")['default']>
     'LazyAppHeader': LazyComponent<typeof import("../app/components/app/header.vue")['default']>
-    'LazyHomeNavigationMenu': LazyComponent<typeof import("../app/components/home/navigationMenu.vue")['default']>
     'LazyTodoCreate': LazyComponent<typeof import("../app/components/todo/create.vue")['default']>
     'LazyTodoSave': LazyComponent<typeof import("../app/components/todo/save.vue")['default']>
     'LazyTodoUpload': LazyComponent<typeof import("../app/components/todo/upload.vue")['default']>
@@ -198,9 +198,9 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const HomeNavigationMenu: typeof import("../app/components/Home/navigationMenu.vue")['default']
 export const AppFooter: typeof import("../app/components/app/footer.vue")['default']
 export const AppHeader: typeof import("../app/components/app/header.vue")['default']
-export const HomeNavigationMenu: typeof import("../app/components/home/navigationMenu.vue")['default']
 export const TodoCreate: typeof import("../app/components/todo/create.vue")['default']
 export const TodoSave: typeof import("../app/components/todo/save.vue")['default']
 export const TodoUpload: typeof import("../app/components/todo/upload.vue")['default']
@@ -288,9 +288,9 @@ export const Html: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blob
 export const Body: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/.pnpm/nuxt@4.0.0_@netlify+blobs@9_9c1d45b024c5efc42a0109a202a22093/node_modules/nuxt/dist/app/components/server-placeholder")['default']
+export const LazyHomeNavigationMenu: LazyComponent<typeof import("../app/components/Home/navigationMenu.vue")['default']>
 export const LazyAppFooter: LazyComponent<typeof import("../app/components/app/footer.vue")['default']>
 export const LazyAppHeader: LazyComponent<typeof import("../app/components/app/header.vue")['default']>
-export const LazyHomeNavigationMenu: LazyComponent<typeof import("../app/components/home/navigationMenu.vue")['default']>
 export const LazyTodoCreate: LazyComponent<typeof import("../app/components/todo/create.vue")['default']>
 export const LazyTodoSave: LazyComponent<typeof import("../app/components/todo/save.vue")['default']>
 export const LazyTodoUpload: LazyComponent<typeof import("../app/components/todo/upload.vue")['default']>
