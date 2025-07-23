@@ -10,7 +10,7 @@ definePageMeta({
 const choice = ref<'show' | 'create'>('show')
 const storedUser = ref<{ id?: number, name?: string } | null>(null)
 const userTodoKey = computed(() =>
-storedUser.value?.id !== undefined ? `todos_user_${storedUser.value.id}` : 'todos_default',
+  storedUser.value?.id !== undefined ? `todos_user_${storedUser.value.id}` : 'todos_default',
 )
 const router = useRouter()
 onMounted(async () => {
@@ -21,9 +21,8 @@ onMounted(async () => {
       name: 'home',
     })
   }
-  if (!_id) 
+  if (!_id)
     _backHome()
-
 
   await userStore.fetchUsers()
     .then(() => {
@@ -35,7 +34,7 @@ onMounted(async () => {
 const storedTodos = ref<Todo[]>([])
 
 onMounted(() => {
- userStore.getuser(storedUser) // kullanıcı bilgilerini aldım
+  userStore.getuser(storedUser) // kullanıcı bilgilerini aldım
 
   todoStore.getTodo(userTodoKey, storedTodos) // todo'ları aldım
 
@@ -48,27 +47,23 @@ watch(() => todoStore.todos, (newTodos) => {
     todoStore.saveLocalStorage(userTodoKey, storedTodos) // todo'ları localStorage'a kaydettim
   }
 }, { deep: true })
-
 </script>
 
 <template>
   <div
     class="w-dvw min-h-screen flex flex-col items-center justify-center"
-    :class="isDark ? 'bg-zinc-600 text-white' : 'bg-gray-800 text-white'"
   >
-
     <h1 class="text-5xl">
       {{ storedUser?.name ?? '' }}
     </h1>
-  <div class="flex flex-row items-center justify-center gap-4 mt-4">
-    <TodoSave @click="choice = 'create'" />
-    <TodoUpload @click="choice = 'show'" />
-  </div>
+    <div class="flex flex-row items-center justify-center gap-4 mt-4">
+      <TodoSave @click="choice = 'create'" />
+      <TodoUpload @click="choice = 'show'" />
+    </div>
     <div
       class="w-dvw flex flex-row items-center justify-center scale-100"
     >
       <div class="flex flex-col gap-4 text-white w-dvw min-h-screen items-center">
-        
         <div v-if="choice === 'show'" class="flex flex-col items-center ">
           <div v-if="storedTodos.length === 0" class="p-4 w-96">
             <div
@@ -81,7 +76,6 @@ watch(() => todoStore.todos, (newTodos) => {
           <div v-for="todo in storedTodos" :key="todo.id" class="p-4 w-96">
             <div
               class="flex flex-col items-start min-h-fit w-full rounded-lg p-4 "
-              :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-700 text-white'"
             >
               <div class="text-lg">
                 {{ todo.text }}

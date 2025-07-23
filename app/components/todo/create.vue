@@ -19,7 +19,6 @@ const endDate = ref('')
   <div class="flex flex-col items-center justify-center">
     <div
       class="flex flex-col items-center justify-center rounded-lg shadow-lg p-4"
-      :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-700 text-white' "
     >
       <span>Todo Konusu</span>
       <UInput

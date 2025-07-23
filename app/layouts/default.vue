@@ -3,28 +3,11 @@
 </script>
 
 <template>
-  <div
-    class="w-dvw h-24 flex flex-row"
-    :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white'"
-  >
-    <div
-      class="w-dvw h-24 flex flex-row items-center justify-between px-4 border-b-2"
-    >
-      <div>
-        <h1 class="font-extrabold text-4xl w-96 overflow-y-hidden" @click="$router.push('/')">
-          Todo List
-        </h1>
-      </div>
-      <Header />
+  <div class="fixed left-0 top-0 w-screen h-screen flex flex-col">
+    <app-header />
+    <div class="w-full h-full flex flex-col">
+      <slot />
     </div>
-  </div>
-  <slot />
-  <div
-    class="w-screen h-24 flex flex-row items-center justify-center"
-    :class="isDark ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white' "
-  >
-    <p class="text-gray-500">
-      Made with ❤️ by Goktuğ
-    </p>
+    <app-footer />
   </div>
 </template>
