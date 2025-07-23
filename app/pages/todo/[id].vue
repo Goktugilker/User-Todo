@@ -73,10 +73,10 @@ watch(() => todoStore.todos, (newTodos) => {
               <span>no todos available</span>
             </div>
           </div>
-          <div 
-          v-for="todo in storedTodos" :key="todo.id" 
-          class="md:min-w-xl w-xs flex flex-row justify-between items-center p-4 rounded-4xl"
-          :class="isDark ? 'bg-zinc-800/60' : 'bg-secondary-600/30 text-black'"
+          <div
+            v-for="todo in storedTodos" :key="todo.id"
+            class="md:min-w-xl w-xs flex flex-row justify-between items-center p-4 rounded-4xl"
+            :class="isDark ? 'bg-zinc-800/60' : 'bg-secondary-600/30 text-black'"
           >
             <div class="flex flex-col w-full  ">
               <span>

@@ -1,9 +1,8 @@
-![GitHub License](https://img.shields.io/github/license/goktugilker/User-Todo?style=plastic) 
+![GitHub License](https://img.shields.io/github/license/goktugilker/User-Todo?style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/goktugilker/User-Todo?style=plastic&color=FF0000)
-![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) 
-![Nuxt JS](https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=#00DC82) 
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
+![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=plastic&logo=vuedotjs&logoColor=%234FC08D)
+![Nuxt JS](https://img.shields.io/badge/Nuxt-002E3B?style=plastic&logo=nuxt.js&logoColor=#00DC82)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=plastic&logo=tailwind-css&logoColor=white)
 
 # Nuxt Başlangıç Görevi
 

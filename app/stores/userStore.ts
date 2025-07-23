@@ -17,9 +17,9 @@ export const useUserStore = defineStore('user', () => {
 
   const getuser = (storedUser: any) => {
     const storedUserData = localStorage.getItem(key as string) // kullanıcı bilgilerini aldım
-    if (!storedUserData) 
+    if (!storedUserData)
       return
-      storedUser.value = JSON.parse(storedUserData)
+    storedUser.value = JSON.parse(storedUserData)
   }
   return {
     user,
